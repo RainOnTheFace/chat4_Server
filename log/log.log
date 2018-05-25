@@ -1,0 +1,1340 @@
+2017-07-26 20:17:22,023 WARN [org.hibernate.util.JDBCExceptionReporter] - SQL Error: 1045, SQLState: 28000
+2017-07-26 20:17:22,025 ERROR [org.hibernate.util.JDBCExceptionReporter] - Access denied for user 'root'@'localhost' (using password: YES)
+2017-07-26 20:17:22,028 WARN [org.hibernate.cfg.SettingsFactory] - Could not obtain connection to query metadata
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1073)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:951)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1717)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1276)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2395)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:173)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:164)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:153)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:119)
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:83)
+	at org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:114)
+	at org.hibernate.cfg.Configuration.buildSettingsInternal(Configuration.java:2163)
+	at org.hibernate.cfg.Configuration.buildSettings(Configuration.java:2159)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1383)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:954)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1511)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:636)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:938)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.cn.server.ServerMain.main(ServerMain.java:15)
+2017-07-26 20:17:23,233 WARN [org.hibernate.util.JDBCExceptionReporter] - SQL Error: 1045, SQLState: 28000
+2017-07-26 20:17:23,234 ERROR [org.hibernate.util.JDBCExceptionReporter] - Access denied for user 'root'@'localhost' (using password: YES)
+2017-07-26 20:17:23,234 ERROR [org.hibernate.tool.hbm2ddl.SchemaUpdate] - could not get database metadata
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1073)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:951)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1717)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1276)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2395)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:173)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:164)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:153)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:119)
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:83)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:168)
+	at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:386)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1385)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:954)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1511)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:636)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:938)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.cn.server.ServerMain.main(ServerMain.java:15)
+2017-07-26 20:17:23,244 ERROR [org.hibernate.tool.hbm2ddl.SchemaUpdate] - could not complete schema update
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1073)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:951)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1717)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1276)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2395)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:173)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:164)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:153)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:119)
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:83)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:168)
+	at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:386)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1385)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:954)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1511)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:636)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:938)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.cn.server.ServerMain.main(ServerMain.java:15)
+2017-07-27 20:47:00,113 WARN [io.netty.channel.DefaultChannelPipeline] - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at io.netty.buffer.UnpooledUnsafeDirectByteBuf.setBytes(UnpooledUnsafeDirectByteBuf.java:357)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:898)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:242)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:112)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137)
+	at java.lang.Thread.run(Unknown Source)
+2017-07-27 20:48:32,257 WARN [io.netty.channel.DefaultChannelPipeline] - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at io.netty.buffer.UnpooledUnsafeDirectByteBuf.setBytes(UnpooledUnsafeDirectByteBuf.java:357)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:898)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:242)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:112)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137)
+	at java.lang.Thread.run(Unknown Source)
+2017-07-29 18:10:23,854 INFO [org.springframework.context.support.ClassPathXmlApplicationContext] - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@39165e21: startup date [Sat Jul 29 18:10:23 CST 2017]; root of context hierarchy
+2017-07-29 18:10:24,196 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [applicationContext.xml]
+2017-07-29 18:10:25,781 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from file [D:\workspace\chat4_Server\target\classes\jdbc.properties]
+2017-07-29 18:10:25,783 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from file [D:\workspace\chat4_Server\target\classes\log4j.properties]
+2017-07-29 18:10:25,890 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2b8f443d: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,chatHandlerImpl,chatServiceImpl,playerDao,playerHandlerImpl,playerServiceImpl,handlerScaner,server,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sessionFactory,hibernateTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2017-07-29 18:10:26,218 INFO [org.springframework.jdbc.datasource.DriverManagerDataSource] - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-07-29 18:10:26,354 INFO [org.hibernate.cfg.annotations.Version] - Hibernate Annotations 3.5.6-Final
+2017-07-29 18:10:26,391 INFO [org.hibernate.cfg.Environment] - Hibernate 3.5.6-Final
+2017-07-29 18:10:26,396 INFO [org.hibernate.cfg.Environment] - hibernate.properties not found
+2017-07-29 18:10:26,407 INFO [org.hibernate.cfg.Environment] - Bytecode provider name : javassist
+2017-07-29 18:10:26,419 INFO [org.hibernate.cfg.Environment] - using JDK 1.4 java.sql.Timestamp handling
+2017-07-29 18:10:26,794 INFO [org.hibernate.annotations.common.Version] - Hibernate Commons Annotations 3.2.0.Final
+2017-07-29 18:10:27,051 INFO [org.hibernate.cfg.AnnotationBinder] - Binding entity from annotated class: com.cn.server.module.player.dao.entity.Player
+2017-07-29 18:10:27,209 INFO [org.hibernate.cfg.annotations.EntityBinder] - Bind entity com.cn.server.module.player.dao.entity.Player on table player
+2017-07-29 18:10:27,415 INFO [org.hibernate.cfg.AnnotationConfiguration] - Hibernate Validator not found: ignoring
+2017-07-29 18:10:27,422 INFO [org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean] - Building new Hibernate SessionFactory
+2017-07-29 18:10:27,431 INFO [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-07-29 18:10:27,618 INFO [org.hibernate.connection.ConnectionProviderFactory] - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-07-29 18:10:28,511 INFO [org.hibernate.cfg.SettingsFactory] - RDBMS: MySQL, version: 5.5.40
+2017-07-29 18:10:28,512 INFO [org.hibernate.cfg.SettingsFactory] - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.20 ( Revision: tonci.grgin@oracle.com-20111003110438-qfydx066wsbydkbw )
+2017-07-29 18:10:28,581 INFO [org.hibernate.dialect.Dialect] - Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-07-29 18:10:28,632 INFO [org.hibernate.transaction.TransactionFactoryFactory] - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-07-29 18:10:28,635 INFO [org.hibernate.transaction.TransactionManagerLookupFactory] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-07-29 18:10:28,636 INFO [org.hibernate.cfg.SettingsFactory] - Automatic flush during beforeCompletion(): disabled
+2017-07-29 18:10:28,636 INFO [org.hibernate.cfg.SettingsFactory] - Automatic session close at end of transaction: disabled
+2017-07-29 18:10:28,637 INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch size: 15
+2017-07-29 18:10:28,637 INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch updates for versioned data: disabled
+2017-07-29 18:10:28,639 INFO [org.hibernate.cfg.SettingsFactory] - Scrollable result sets: enabled
+2017-07-29 18:10:28,640 INFO [org.hibernate.cfg.SettingsFactory] - JDBC3 getGeneratedKeys(): enabled
+2017-07-29 18:10:28,640 INFO [org.hibernate.cfg.SettingsFactory] - Connection release mode: auto
+2017-07-29 18:10:28,645 INFO [org.hibernate.cfg.SettingsFactory] - Maximum outer join fetch depth: 2
+2017-07-29 18:10:28,645 INFO [org.hibernate.cfg.SettingsFactory] - Default batch fetch size: 1
+2017-07-29 18:10:28,645 INFO [org.hibernate.cfg.SettingsFactory] - Generate SQL with comments: disabled
+2017-07-29 18:10:28,646 INFO [org.hibernate.cfg.SettingsFactory] - Order SQL updates by primary key: disabled
+2017-07-29 18:10:28,646 INFO [org.hibernate.cfg.SettingsFactory] - Order SQL inserts for batching: disabled
+2017-07-29 18:10:28,646 INFO [org.hibernate.cfg.SettingsFactory] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-07-29 18:10:28,652 INFO [org.hibernate.hql.ast.ASTQueryTranslatorFactory] - Using ASTQueryTranslatorFactory
+2017-07-29 18:10:28,652 INFO [org.hibernate.cfg.SettingsFactory] - Query language substitutions: {}
+2017-07-29 18:10:28,653 INFO [org.hibernate.cfg.SettingsFactory] - JPA-QL strict compliance: disabled
+2017-07-29 18:10:28,653 INFO [org.hibernate.cfg.SettingsFactory] - Second-level cache: enabled
+2017-07-29 18:10:28,653 INFO [org.hibernate.cfg.SettingsFactory] - Query cache: disabled
+2017-07-29 18:10:28,654 INFO [org.hibernate.cfg.SettingsFactory] - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-07-29 18:10:28,654 INFO [org.hibernate.cfg.SettingsFactory] - Optimize cache for minimal puts: disabled
+2017-07-29 18:10:28,654 INFO [org.hibernate.cfg.SettingsFactory] - Structured second-level cache entries: disabled
+2017-07-29 18:10:28,670 INFO [org.hibernate.cfg.SettingsFactory] - Echoing all SQL to stdout
+2017-07-29 18:10:28,672 INFO [org.hibernate.cfg.SettingsFactory] - Statistics: disabled
+2017-07-29 18:10:28,672 INFO [org.hibernate.cfg.SettingsFactory] - Deleted entity synthetic identifier rollback: disabled
+2017-07-29 18:10:28,673 INFO [org.hibernate.cfg.SettingsFactory] - Default entity-mode: pojo
+2017-07-29 18:10:28,673 INFO [org.hibernate.cfg.SettingsFactory] - Named query checking : enabled
+2017-07-29 18:10:28,674 INFO [org.hibernate.cfg.SettingsFactory] - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-07-29 18:10:28,796 INFO [org.hibernate.impl.SessionFactoryImpl] - building session factory
+2017-07-29 18:10:29,399 INFO [org.hibernate.impl.SessionFactoryObjectFactory] - Not binding factory to JNDI, no JNDI name configured
+2017-07-29 18:10:29,417 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - Running hbm2ddl schema update
+2017-07-29 18:10:29,418 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - fetching database metadata
+2017-07-29 18:10:29,517 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - updating schema
+2017-07-29 18:10:29,595 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - table found: test.player
+2017-07-29 18:10:29,596 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - columns: [exp, level, playername, passward, playerid]
+2017-07-29 18:10:29,596 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - foreign keys: []
+2017-07-29 18:10:29,597 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - indexes: [primary]
+2017-07-29 18:10:29,599 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - schema update complete
+2017-07-29 18:10:39,723 INFO [org.springframework.context.support.ClassPathXmlApplicationContext] - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@375ef3ab: startup date [Sat Jul 29 18:10:39 CST 2017]; root of context hierarchy
+2017-07-29 18:10:40,013 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [applicationContext.xml]
+2017-07-29 18:10:41,719 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from file [D:\workspace\chat4_Server\target\classes\jdbc.properties]
+2017-07-29 18:10:41,722 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from file [D:\workspace\chat4_Server\target\classes\log4j.properties]
+2017-07-29 18:10:41,843 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@647f84c9: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,chatHandlerImpl,chatServiceImpl,playerDao,playerHandlerImpl,playerServiceImpl,handlerScaner,server,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sessionFactory,hibernateTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2017-07-29 18:10:42,216 INFO [org.springframework.jdbc.datasource.DriverManagerDataSource] - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-07-29 18:10:42,373 INFO [org.hibernate.cfg.annotations.Version] - Hibernate Annotations 3.5.6-Final
+2017-07-29 18:10:42,414 INFO [org.hibernate.cfg.Environment] - Hibernate 3.5.6-Final
+2017-07-29 18:10:42,420 INFO [org.hibernate.cfg.Environment] - hibernate.properties not found
+2017-07-29 18:10:42,430 INFO [org.hibernate.cfg.Environment] - Bytecode provider name : javassist
+2017-07-29 18:10:42,444 INFO [org.hibernate.cfg.Environment] - using JDK 1.4 java.sql.Timestamp handling
+2017-07-29 18:10:42,817 INFO [org.hibernate.annotations.common.Version] - Hibernate Commons Annotations 3.2.0.Final
+2017-07-29 18:10:43,127 INFO [org.hibernate.cfg.AnnotationBinder] - Binding entity from annotated class: com.cn.server.module.player.dao.entity.Player
+2017-07-29 18:10:43,285 INFO [org.hibernate.cfg.annotations.EntityBinder] - Bind entity com.cn.server.module.player.dao.entity.Player on table player
+2017-07-29 18:10:43,506 INFO [org.hibernate.cfg.AnnotationConfiguration] - Hibernate Validator not found: ignoring
+2017-07-29 18:10:43,516 INFO [org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean] - Building new Hibernate SessionFactory
+2017-07-29 18:10:43,528 INFO [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-07-29 18:10:43,749 INFO [org.hibernate.connection.ConnectionProviderFactory] - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-07-29 18:10:45,220 INFO [org.hibernate.cfg.SettingsFactory] - RDBMS: MySQL, version: 5.5.40
+2017-07-29 18:10:45,221 INFO [org.hibernate.cfg.SettingsFactory] - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.20 ( Revision: tonci.grgin@oracle.com-20111003110438-qfydx066wsbydkbw )
+2017-07-29 18:10:45,339 INFO [org.hibernate.dialect.Dialect] - Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-07-29 18:10:45,402 INFO [org.hibernate.transaction.TransactionFactoryFactory] - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-07-29 18:10:45,407 INFO [org.hibernate.transaction.TransactionManagerLookupFactory] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-07-29 18:10:45,408 INFO [org.hibernate.cfg.SettingsFactory] - Automatic flush during beforeCompletion(): disabled
+2017-07-29 18:10:45,409 INFO [org.hibernate.cfg.SettingsFactory] - Automatic session close at end of transaction: disabled
+2017-07-29 18:10:45,409 INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch size: 15
+2017-07-29 18:10:45,409 INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch updates for versioned data: disabled
+2017-07-29 18:10:45,413 INFO [org.hibernate.cfg.SettingsFactory] - Scrollable result sets: enabled
+2017-07-29 18:10:45,414 INFO [org.hibernate.cfg.SettingsFactory] - JDBC3 getGeneratedKeys(): enabled
+2017-07-29 18:10:45,414 INFO [org.hibernate.cfg.SettingsFactory] - Connection release mode: auto
+2017-07-29 18:10:45,417 INFO [org.hibernate.cfg.SettingsFactory] - Maximum outer join fetch depth: 2
+2017-07-29 18:10:45,418 INFO [org.hibernate.cfg.SettingsFactory] - Default batch fetch size: 1
+2017-07-29 18:10:45,418 INFO [org.hibernate.cfg.SettingsFactory] - Generate SQL with comments: disabled
+2017-07-29 18:10:45,419 INFO [org.hibernate.cfg.SettingsFactory] - Order SQL updates by primary key: disabled
+2017-07-29 18:10:45,419 INFO [org.hibernate.cfg.SettingsFactory] - Order SQL inserts for batching: disabled
+2017-07-29 18:10:45,420 INFO [org.hibernate.cfg.SettingsFactory] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-07-29 18:10:45,429 INFO [org.hibernate.hql.ast.ASTQueryTranslatorFactory] - Using ASTQueryTranslatorFactory
+2017-07-29 18:10:45,430 INFO [org.hibernate.cfg.SettingsFactory] - Query language substitutions: {}
+2017-07-29 18:10:45,430 INFO [org.hibernate.cfg.SettingsFactory] - JPA-QL strict compliance: disabled
+2017-07-29 18:10:45,431 INFO [org.hibernate.cfg.SettingsFactory] - Second-level cache: enabled
+2017-07-29 18:10:45,432 INFO [org.hibernate.cfg.SettingsFactory] - Query cache: disabled
+2017-07-29 18:10:45,432 INFO [org.hibernate.cfg.SettingsFactory] - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-07-29 18:10:45,433 INFO [org.hibernate.cfg.SettingsFactory] - Optimize cache for minimal puts: disabled
+2017-07-29 18:10:45,433 INFO [org.hibernate.cfg.SettingsFactory] - Structured second-level cache entries: disabled
+2017-07-29 18:10:45,456 INFO [org.hibernate.cfg.SettingsFactory] - Echoing all SQL to stdout
+2017-07-29 18:10:45,461 INFO [org.hibernate.cfg.SettingsFactory] - Statistics: disabled
+2017-07-29 18:10:45,461 INFO [org.hibernate.cfg.SettingsFactory] - Deleted entity synthetic identifier rollback: disabled
+2017-07-29 18:10:45,462 INFO [org.hibernate.cfg.SettingsFactory] - Default entity-mode: pojo
+2017-07-29 18:10:45,463 INFO [org.hibernate.cfg.SettingsFactory] - Named query checking : enabled
+2017-07-29 18:10:45,464 INFO [org.hibernate.cfg.SettingsFactory] - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-07-29 18:10:45,635 INFO [org.hibernate.impl.SessionFactoryImpl] - building session factory
+2017-07-29 18:10:46,609 INFO [org.hibernate.impl.SessionFactoryObjectFactory] - Not binding factory to JNDI, no JNDI name configured
+2017-07-29 18:10:46,651 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - Running hbm2ddl schema update
+2017-07-29 18:10:46,651 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - fetching database metadata
+2017-07-29 18:10:46,757 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - updating schema
+2017-07-29 18:10:46,889 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - table found: test.player
+2017-07-29 18:10:46,890 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - columns: [exp, level, playername, passward, playerid]
+2017-07-29 18:10:46,890 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - foreign keys: []
+2017-07-29 18:10:46,890 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - indexes: [primary]
+2017-07-29 18:10:46,893 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - schema update complete
+2017-07-29 18:11:05,220 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-07-29 18:11:08,919 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：1
+2017-07-29 18:11:09,035 INFO [com.cn.server.ServerHandler] - ***** 会话移除
+2017-07-29 18:11:13,513 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：1
+2017-07-29 18:11:13,518 WARN [io.netty.channel.DefaultChannelPipeline] - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at io.netty.buffer.UnpooledUnsafeDirectByteBuf.setBytes(UnpooledUnsafeDirectByteBuf.java:357)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:898)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:242)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:112)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137)
+	at java.lang.Thread.run(Unknown Source)
+2017-07-29 18:11:13,526 INFO [com.cn.server.ServerHandler] - ***** 会话移除
+2017-07-29 18:11:44,933 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-07-29 18:11:52,519 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：1
+2017-07-29 18:11:52,577 INFO [com.cn.server.ServerHandler] - ***** 会话移除
+2017-07-29 18:13:53,290 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-07-29 18:14:01,878 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：1
+2017-07-29 18:14:01,974 INFO [com.cn.server.ServerHandler] - ***** 会话移除
+2017-07-29 18:19:12,005 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-07-29 18:19:20,500 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：1
+2017-07-29 18:19:20,578 INFO [com.cn.server.ServerHandler] - ***** 会话移除
+2017-07-29 18:19:37,765 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-07-29 18:19:43,620 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：1
+2017-07-29 18:19:43,678 INFO [com.cn.server.ServerHandler] - ***** 会话移除
+2017-07-29 18:21:33,326 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：1
+2017-07-29 18:21:33,328 WARN [io.netty.channel.DefaultChannelPipeline] - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at io.netty.buffer.UnpooledUnsafeDirectByteBuf.setBytes(UnpooledUnsafeDirectByteBuf.java:357)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:898)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:242)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:112)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137)
+	at java.lang.Thread.run(Unknown Source)
+2017-07-29 18:21:33,331 INFO [com.cn.server.ServerHandler] - ***** 会话移除
+2017-07-29 18:21:36,235 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-07-29 18:21:41,657 WARN [io.netty.channel.DefaultChannelPipeline] - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at io.netty.buffer.UnpooledUnsafeDirectByteBuf.setBytes(UnpooledUnsafeDirectByteBuf.java:357)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:898)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:242)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:112)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137)
+	at java.lang.Thread.run(Unknown Source)
+2017-07-29 18:21:41,660 INFO [com.cn.server.ServerHandler] - ***** 会话移除
+2017-07-29 18:24:36,887 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-07-29 18:24:53,159 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-07-29 18:25:18,976 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：1
+2017-07-29 18:25:19,053 INFO [com.cn.server.ServerHandler] - ***** 会话移除
+2017-07-29 18:27:51,989 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：1
+2017-07-29 18:27:52,058 INFO [com.cn.server.ServerHandler] - ***** 会话移除
+2017-07-29 18:28:34,214 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-07-29 18:28:50,264 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：1
+2017-07-29 18:28:50,308 INFO [com.cn.server.ServerHandler] - ***** 会话移除
+2017-07-29 18:30:02,349 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-07-29 18:30:12,717 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：1
+2017-07-29 18:30:12,771 INFO [com.cn.server.ServerHandler] - ***** 会话移除
+2017-07-29 18:33:13,799 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-07-29 18:33:22,417 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-07-29 18:33:47,147 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-07-29 18:34:02,813 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：1
+2017-07-29 18:34:14,800 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：2
+2017-07-29 18:34:18,748 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：2
+2017-07-29 18:34:31,661 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-07-29 18:34:40,352 INFO [com.cn.server.ServerHandler] - ***** 会话移除
+2017-07-29 18:34:41,885 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-07-29 18:34:43,685 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：2
+2017-07-29 18:35:52,468 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：2
+2017-07-29 18:36:05,148 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：2
+2017-07-29 18:36:15,236 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：2
+2017-07-29 18:36:20,684 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：2
+2017-07-29 18:45:39,912 WARN [io.netty.channel.DefaultChannelPipeline] - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at io.netty.buffer.UnpooledUnsafeDirectByteBuf.setBytes(UnpooledUnsafeDirectByteBuf.java:357)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:898)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:242)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:112)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137)
+	at java.lang.Thread.run(Unknown Source)
+2017-07-29 18:45:39,916 INFO [com.cn.server.ServerHandler] - ***** 会话移除
+2017-08-05 10:13:07,354 INFO [org.springframework.context.support.ClassPathXmlApplicationContext] - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@52437b9a: startup date [Sat Aug 05 10:13:07 CST 2017]; root of context hierarchy
+2017-08-05 10:13:07,705 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [applicationContext.xml]
+2017-08-05 10:13:09,595 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from file [D:\workspace\chat4_Server\target\classes\jdbc.properties]
+2017-08-05 10:13:09,596 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from file [D:\workspace\chat4_Server\target\classes\log4j.properties]
+2017-08-05 10:13:09,704 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@71bb7179: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,chatHandlerImpl,chatServiceImpl,playerDao,playerHandlerImpl,playerServiceImpl,handlerScaner,server,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sessionFactory,hibernateTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2017-08-05 10:13:10,151 INFO [org.springframework.jdbc.datasource.DriverManagerDataSource] - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-08-05 10:13:10,365 INFO [org.hibernate.cfg.annotations.Version] - Hibernate Annotations 3.5.6-Final
+2017-08-05 10:13:10,422 INFO [org.hibernate.cfg.Environment] - Hibernate 3.5.6-Final
+2017-08-05 10:13:10,427 INFO [org.hibernate.cfg.Environment] - hibernate.properties not found
+2017-08-05 10:13:10,437 INFO [org.hibernate.cfg.Environment] - Bytecode provider name : javassist
+2017-08-05 10:13:10,472 INFO [org.hibernate.cfg.Environment] - using JDK 1.4 java.sql.Timestamp handling
+2017-08-05 10:13:10,848 INFO [org.hibernate.annotations.common.Version] - Hibernate Commons Annotations 3.2.0.Final
+2017-08-05 10:13:11,117 INFO [org.hibernate.cfg.AnnotationBinder] - Binding entity from annotated class: com.cn.server.module.player.dao.entity.Player
+2017-08-05 10:13:11,285 INFO [org.hibernate.cfg.annotations.EntityBinder] - Bind entity com.cn.server.module.player.dao.entity.Player on table player
+2017-08-05 10:13:11,544 INFO [org.hibernate.cfg.AnnotationConfiguration] - Hibernate Validator not found: ignoring
+2017-08-05 10:13:11,555 INFO [org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean] - Building new Hibernate SessionFactory
+2017-08-05 10:13:11,563 INFO [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-08-05 10:13:11,794 INFO [org.hibernate.connection.ConnectionProviderFactory] - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-08-05 10:13:12,889 INFO [org.hibernate.cfg.SettingsFactory] - RDBMS: MySQL, version: 5.5.40
+2017-08-05 10:13:12,889 INFO [org.hibernate.cfg.SettingsFactory] - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.20 ( Revision: tonci.grgin@oracle.com-20111003110438-qfydx066wsbydkbw )
+2017-08-05 10:13:13,013 INFO [org.hibernate.dialect.Dialect] - Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-08-05 10:13:13,071 INFO [org.hibernate.transaction.TransactionFactoryFactory] - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-08-05 10:13:13,078 INFO [org.hibernate.transaction.TransactionManagerLookupFactory] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-08-05 10:13:13,078 INFO [org.hibernate.cfg.SettingsFactory] - Automatic flush during beforeCompletion(): disabled
+2017-08-05 10:13:13,078 INFO [org.hibernate.cfg.SettingsFactory] - Automatic session close at end of transaction: disabled
+2017-08-05 10:13:13,079 INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch size: 15
+2017-08-05 10:13:13,080 INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch updates for versioned data: disabled
+2017-08-05 10:13:13,082 INFO [org.hibernate.cfg.SettingsFactory] - Scrollable result sets: enabled
+2017-08-05 10:13:13,083 INFO [org.hibernate.cfg.SettingsFactory] - JDBC3 getGeneratedKeys(): enabled
+2017-08-05 10:13:13,083 INFO [org.hibernate.cfg.SettingsFactory] - Connection release mode: auto
+2017-08-05 10:13:13,086 INFO [org.hibernate.cfg.SettingsFactory] - Maximum outer join fetch depth: 2
+2017-08-05 10:13:13,086 INFO [org.hibernate.cfg.SettingsFactory] - Default batch fetch size: 1
+2017-08-05 10:13:13,086 INFO [org.hibernate.cfg.SettingsFactory] - Generate SQL with comments: disabled
+2017-08-05 10:13:13,087 INFO [org.hibernate.cfg.SettingsFactory] - Order SQL updates by primary key: disabled
+2017-08-05 10:13:13,087 INFO [org.hibernate.cfg.SettingsFactory] - Order SQL inserts for batching: disabled
+2017-08-05 10:13:13,088 INFO [org.hibernate.cfg.SettingsFactory] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-08-05 10:13:13,098 INFO [org.hibernate.hql.ast.ASTQueryTranslatorFactory] - Using ASTQueryTranslatorFactory
+2017-08-05 10:13:13,099 INFO [org.hibernate.cfg.SettingsFactory] - Query language substitutions: {}
+2017-08-05 10:13:13,099 INFO [org.hibernate.cfg.SettingsFactory] - JPA-QL strict compliance: disabled
+2017-08-05 10:13:13,099 INFO [org.hibernate.cfg.SettingsFactory] - Second-level cache: enabled
+2017-08-05 10:13:13,100 INFO [org.hibernate.cfg.SettingsFactory] - Query cache: disabled
+2017-08-05 10:13:13,100 INFO [org.hibernate.cfg.SettingsFactory] - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-08-05 10:13:13,101 INFO [org.hibernate.cfg.SettingsFactory] - Optimize cache for minimal puts: disabled
+2017-08-05 10:13:13,101 INFO [org.hibernate.cfg.SettingsFactory] - Structured second-level cache entries: disabled
+2017-08-05 10:13:13,124 INFO [org.hibernate.cfg.SettingsFactory] - Echoing all SQL to stdout
+2017-08-05 10:13:13,128 INFO [org.hibernate.cfg.SettingsFactory] - Statistics: disabled
+2017-08-05 10:13:13,128 INFO [org.hibernate.cfg.SettingsFactory] - Deleted entity synthetic identifier rollback: disabled
+2017-08-05 10:13:13,129 INFO [org.hibernate.cfg.SettingsFactory] - Default entity-mode: pojo
+2017-08-05 10:13:13,129 INFO [org.hibernate.cfg.SettingsFactory] - Named query checking : enabled
+2017-08-05 10:13:13,130 INFO [org.hibernate.cfg.SettingsFactory] - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-08-05 10:13:13,328 INFO [org.hibernate.impl.SessionFactoryImpl] - building session factory
+2017-08-05 10:13:13,983 INFO [org.hibernate.impl.SessionFactoryObjectFactory] - Not binding factory to JNDI, no JNDI name configured
+2017-08-05 10:13:14,001 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - Running hbm2ddl schema update
+2017-08-05 10:13:14,002 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - fetching database metadata
+2017-08-05 10:13:14,061 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - updating schema
+2017-08-05 10:13:14,163 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - table found: test.player
+2017-08-05 10:13:14,163 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - columns: [exp, level, playername, passward, playerid]
+2017-08-05 10:13:14,163 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - foreign keys: []
+2017-08-05 10:13:14,164 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - indexes: [primary]
+2017-08-05 10:13:14,166 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - schema update complete
+2017-08-05 10:13:16,344 INFO [com.cn.server.Server] - *****start
+2017-08-05 10:13:48,176 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2017-08-05 10:13:48,177 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 17
+2017-08-05 10:13:48,186 INFO [com.cn.server.ServerHandler] - *****当前线程id: 25
+2017-08-05 10:13:48,193 INFO [com.cn.server.ServerHandler] - *****当前线程id: 35
+2017-08-05 10:13:48,193 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-08-05 10:13:48,951 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-08-05 10:13:48,951 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:1 cmd:2 resultCode:7
+2017-08-05 10:36:50,272 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2017-08-05 10:36:50,273 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 17
+2017-08-05 10:36:50,274 INFO [com.cn.server.ServerHandler] - *****当前线程id: 25
+2017-08-05 10:36:50,278 INFO [com.cn.server.ServerHandler] - *****当前线程id: 37
+2017-08-05 10:36:50,280 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-08-05 10:36:50,372 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-08-05 10:36:50,372 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:1 cmd:2 resultCode:0
+2017-08-05 10:36:59,512 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2017-08-05 10:36:59,513 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 17
+2017-08-05 10:36:59,513 INFO [com.cn.server.ServerHandler] - *****当前线程id: 25
+2017-08-05 10:36:59,515 INFO [com.cn.server.ServerHandler] - *****当前线程id: 38
+2017-08-05 10:36:59,515 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-08-05 10:36:59,639 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-08-05 10:36:59,639 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:1 cmd:2 resultCode:8
+2017-08-05 10:37:03,492 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2017-08-05 10:37:03,493 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 17
+2017-08-05 10:37:03,494 INFO [com.cn.server.ServerHandler] - *****当前线程id: 25
+2017-08-05 10:37:03,495 INFO [com.cn.server.ServerHandler] - *****当前线程id: 39
+2017-08-05 10:37:03,496 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：1
+2017-08-05 10:37:03,612 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-08-05 10:37:03,612 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:2 cmd:101 resultCode:0
+2017-08-05 10:37:03,613 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-08-05 10:37:03,613 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:2 cmd:1 resultCode:0
+2017-08-05 10:39:25,670 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2017-08-05 10:39:25,671 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 18
+2017-08-05 10:39:25,672 INFO [com.cn.server.ServerHandler] - *****当前线程id: 26
+2017-08-05 10:39:25,674 INFO [com.cn.server.ServerHandler] - *****当前线程id: 40
+2017-08-05 10:39:25,675 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-08-05 10:39:25,746 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 18
+2017-08-05 10:39:25,746 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:1 cmd:2 resultCode:0
+2017-08-05 10:48:17,644 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2017-08-05 10:48:17,645 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 18
+2017-08-05 10:48:17,646 INFO [com.cn.server.ServerHandler] - *****当前线程id: 26
+2017-08-05 10:48:17,647 INFO [com.cn.server.ServerHandler] - *****当前线程id: 41
+2017-08-05 10:48:17,647 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：1
+2017-08-05 10:48:17,854 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-08-05 10:48:17,855 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:2 cmd:101 resultCode:0
+2017-08-05 10:48:17,855 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 18
+2017-08-05 10:48:17,855 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:2 cmd:101 resultCode:0
+2017-08-05 10:48:17,856 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 18
+2017-08-05 10:48:17,856 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:2 cmd:1 resultCode:0
+2017-08-05 10:48:39,100 INFO [org.springframework.context.support.ClassPathXmlApplicationContext] - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@52437b9a: startup date [Sat Aug 05 10:48:39 CST 2017]; root of context hierarchy
+2017-08-05 10:48:39,368 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [applicationContext.xml]
+2017-08-05 10:48:40,884 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from file [D:\workspace\chat4_Server\target\classes\jdbc.properties]
+2017-08-05 10:48:40,885 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from file [D:\workspace\chat4_Server\target\classes\log4j.properties]
+2017-08-05 10:48:40,983 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5efbfd6e: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,chatHandlerImpl,chatServiceImpl,playerDao,playerHandlerImpl,playerServiceImpl,handlerScaner,server,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sessionFactory,hibernateTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2017-08-05 10:48:41,294 INFO [org.springframework.jdbc.datasource.DriverManagerDataSource] - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-08-05 10:48:41,420 INFO [org.hibernate.cfg.annotations.Version] - Hibernate Annotations 3.5.6-Final
+2017-08-05 10:48:41,456 INFO [org.hibernate.cfg.Environment] - Hibernate 3.5.6-Final
+2017-08-05 10:48:41,461 INFO [org.hibernate.cfg.Environment] - hibernate.properties not found
+2017-08-05 10:48:41,470 INFO [org.hibernate.cfg.Environment] - Bytecode provider name : javassist
+2017-08-05 10:48:41,481 INFO [org.hibernate.cfg.Environment] - using JDK 1.4 java.sql.Timestamp handling
+2017-08-05 10:48:41,833 INFO [org.hibernate.annotations.common.Version] - Hibernate Commons Annotations 3.2.0.Final
+2017-08-05 10:48:42,078 INFO [org.hibernate.cfg.AnnotationBinder] - Binding entity from annotated class: com.cn.server.module.player.dao.entity.Player
+2017-08-05 10:48:42,220 INFO [org.hibernate.cfg.annotations.EntityBinder] - Bind entity com.cn.server.module.player.dao.entity.Player on table player
+2017-08-05 10:48:42,411 INFO [org.hibernate.cfg.AnnotationConfiguration] - Hibernate Validator not found: ignoring
+2017-08-05 10:48:42,417 INFO [org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean] - Building new Hibernate SessionFactory
+2017-08-05 10:48:42,427 INFO [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-08-05 10:48:42,614 INFO [org.hibernate.connection.ConnectionProviderFactory] - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-08-05 10:48:43,495 INFO [org.hibernate.cfg.SettingsFactory] - RDBMS: MySQL, version: 5.5.40
+2017-08-05 10:48:43,495 INFO [org.hibernate.cfg.SettingsFactory] - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.20 ( Revision: tonci.grgin@oracle.com-20111003110438-qfydx066wsbydkbw )
+2017-08-05 10:48:43,567 INFO [org.hibernate.dialect.Dialect] - Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-08-05 10:48:43,607 INFO [org.hibernate.transaction.TransactionFactoryFactory] - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-08-05 10:48:43,612 INFO [org.hibernate.transaction.TransactionManagerLookupFactory] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-08-05 10:48:43,612 INFO [org.hibernate.cfg.SettingsFactory] - Automatic flush during beforeCompletion(): disabled
+2017-08-05 10:48:43,612 INFO [org.hibernate.cfg.SettingsFactory] - Automatic session close at end of transaction: disabled
+2017-08-05 10:48:43,613 INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch size: 15
+2017-08-05 10:48:43,613 INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch updates for versioned data: disabled
+2017-08-05 10:48:43,615 INFO [org.hibernate.cfg.SettingsFactory] - Scrollable result sets: enabled
+2017-08-05 10:48:43,615 INFO [org.hibernate.cfg.SettingsFactory] - JDBC3 getGeneratedKeys(): enabled
+2017-08-05 10:48:43,615 INFO [org.hibernate.cfg.SettingsFactory] - Connection release mode: auto
+2017-08-05 10:48:43,617 INFO [org.hibernate.cfg.SettingsFactory] - Maximum outer join fetch depth: 2
+2017-08-05 10:48:43,617 INFO [org.hibernate.cfg.SettingsFactory] - Default batch fetch size: 1
+2017-08-05 10:48:43,618 INFO [org.hibernate.cfg.SettingsFactory] - Generate SQL with comments: disabled
+2017-08-05 10:48:43,618 INFO [org.hibernate.cfg.SettingsFactory] - Order SQL updates by primary key: disabled
+2017-08-05 10:48:43,618 INFO [org.hibernate.cfg.SettingsFactory] - Order SQL inserts for batching: disabled
+2017-08-05 10:48:43,618 INFO [org.hibernate.cfg.SettingsFactory] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-08-05 10:48:43,624 INFO [org.hibernate.hql.ast.ASTQueryTranslatorFactory] - Using ASTQueryTranslatorFactory
+2017-08-05 10:48:43,624 INFO [org.hibernate.cfg.SettingsFactory] - Query language substitutions: {}
+2017-08-05 10:48:43,624 INFO [org.hibernate.cfg.SettingsFactory] - JPA-QL strict compliance: disabled
+2017-08-05 10:48:43,624 INFO [org.hibernate.cfg.SettingsFactory] - Second-level cache: enabled
+2017-08-05 10:48:43,625 INFO [org.hibernate.cfg.SettingsFactory] - Query cache: disabled
+2017-08-05 10:48:43,625 INFO [org.hibernate.cfg.SettingsFactory] - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-08-05 10:48:43,625 INFO [org.hibernate.cfg.SettingsFactory] - Optimize cache for minimal puts: disabled
+2017-08-05 10:48:43,626 INFO [org.hibernate.cfg.SettingsFactory] - Structured second-level cache entries: disabled
+2017-08-05 10:48:43,638 INFO [org.hibernate.cfg.SettingsFactory] - Echoing all SQL to stdout
+2017-08-05 10:48:43,640 INFO [org.hibernate.cfg.SettingsFactory] - Statistics: disabled
+2017-08-05 10:48:43,640 INFO [org.hibernate.cfg.SettingsFactory] - Deleted entity synthetic identifier rollback: disabled
+2017-08-05 10:48:43,642 INFO [org.hibernate.cfg.SettingsFactory] - Default entity-mode: pojo
+2017-08-05 10:48:43,642 INFO [org.hibernate.cfg.SettingsFactory] - Named query checking : enabled
+2017-08-05 10:48:43,642 INFO [org.hibernate.cfg.SettingsFactory] - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-08-05 10:48:43,753 INFO [org.hibernate.impl.SessionFactoryImpl] - building session factory
+2017-08-05 10:48:44,307 INFO [org.hibernate.impl.SessionFactoryObjectFactory] - Not binding factory to JNDI, no JNDI name configured
+2017-08-05 10:48:44,324 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - Running hbm2ddl schema update
+2017-08-05 10:48:44,325 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - fetching database metadata
+2017-08-05 10:48:44,429 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - updating schema
+2017-08-05 10:48:44,520 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - table found: test.player
+2017-08-05 10:48:44,520 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - columns: [exp, level, playername, passward, playerid]
+2017-08-05 10:48:44,520 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - foreign keys: []
+2017-08-05 10:48:44,520 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - indexes: [primary]
+2017-08-05 10:48:44,522 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - schema update complete
+2017-08-05 10:48:46,233 INFO [com.cn.server.Server] - *****start
+2017-08-05 10:49:00,925 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2017-08-05 10:49:00,925 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 17
+2017-08-05 10:49:00,933 INFO [com.cn.server.ServerHandler] - *****当前线程id: 25
+2017-08-05 10:49:00,937 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：1
+2017-08-05 10:49:00,944 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-08-05 10:49:00,944 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:2 cmd:1 resultCode:11
+2017-10-31 11:02:18,991 INFO [org.springframework.context.support.ClassPathXmlApplicationContext] - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@52437b9a: startup date [Tue Oct 31 11:02:18 CST 2017]; root of context hierarchy
+2017-10-31 11:02:19,425 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [applicationContext.xml]
+2017-10-31 11:02:21,197 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from file [D:\workspace\chat4_Server\target\classes\jdbc.properties]
+2017-10-31 11:02:21,199 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from file [D:\workspace\chat4_Server\target\classes\log4j.properties]
+2017-10-31 11:02:21,328 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4916f944: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,chatHandlerImpl,chatServiceImpl,playerDao,playerHandlerImpl,playerServiceImpl,handlerScaner,server,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sessionFactory,hibernateTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2017-10-31 11:02:21,911 INFO [org.springframework.jdbc.datasource.DriverManagerDataSource] - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-31 11:02:22,091 INFO [org.hibernate.cfg.annotations.Version] - Hibernate Annotations 3.5.6-Final
+2017-10-31 11:02:22,148 INFO [org.hibernate.cfg.Environment] - Hibernate 3.5.6-Final
+2017-10-31 11:02:22,153 INFO [org.hibernate.cfg.Environment] - hibernate.properties not found
+2017-10-31 11:02:22,163 INFO [org.hibernate.cfg.Environment] - Bytecode provider name : javassist
+2017-10-31 11:02:22,200 INFO [org.hibernate.cfg.Environment] - using JDK 1.4 java.sql.Timestamp handling
+2017-10-31 11:02:22,594 INFO [org.hibernate.annotations.common.Version] - Hibernate Commons Annotations 3.2.0.Final
+2017-10-31 11:02:22,879 INFO [org.hibernate.cfg.AnnotationBinder] - Binding entity from annotated class: com.cn.server.module.player.dao.entity.Player
+2017-10-31 11:02:23,019 INFO [org.hibernate.cfg.annotations.EntityBinder] - Bind entity com.cn.server.module.player.dao.entity.Player on table player
+2017-10-31 11:02:23,184 INFO [org.hibernate.cfg.AnnotationConfiguration] - Hibernate Validator not found: ignoring
+2017-10-31 11:02:23,192 INFO [org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean] - Building new Hibernate SessionFactory
+2017-10-31 11:02:23,201 INFO [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-10-31 11:02:23,419 INFO [org.hibernate.connection.ConnectionProviderFactory] - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-10-31 11:02:24,461 INFO [org.hibernate.cfg.SettingsFactory] - RDBMS: MySQL, version: 5.5.40
+2017-10-31 11:02:24,461 INFO [org.hibernate.cfg.SettingsFactory] - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.20 ( Revision: tonci.grgin@oracle.com-20111003110438-qfydx066wsbydkbw )
+2017-10-31 11:02:24,561 INFO [org.hibernate.dialect.Dialect] - Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-31 11:02:24,642 INFO [org.hibernate.transaction.TransactionFactoryFactory] - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-10-31 11:02:24,647 INFO [org.hibernate.transaction.TransactionManagerLookupFactory] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-10-31 11:02:24,648 INFO [org.hibernate.cfg.SettingsFactory] - Automatic flush during beforeCompletion(): disabled
+2017-10-31 11:02:24,648 INFO [org.hibernate.cfg.SettingsFactory] - Automatic session close at end of transaction: disabled
+2017-10-31 11:02:24,649 INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch size: 15
+2017-10-31 11:02:24,649 INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch updates for versioned data: disabled
+2017-10-31 11:02:24,652 INFO [org.hibernate.cfg.SettingsFactory] - Scrollable result sets: enabled
+2017-10-31 11:02:24,652 INFO [org.hibernate.cfg.SettingsFactory] - JDBC3 getGeneratedKeys(): enabled
+2017-10-31 11:02:24,652 INFO [org.hibernate.cfg.SettingsFactory] - Connection release mode: auto
+2017-10-31 11:02:24,655 INFO [org.hibernate.cfg.SettingsFactory] - Maximum outer join fetch depth: 2
+2017-10-31 11:02:24,656 INFO [org.hibernate.cfg.SettingsFactory] - Default batch fetch size: 1
+2017-10-31 11:02:24,656 INFO [org.hibernate.cfg.SettingsFactory] - Generate SQL with comments: disabled
+2017-10-31 11:02:24,656 INFO [org.hibernate.cfg.SettingsFactory] - Order SQL updates by primary key: disabled
+2017-10-31 11:02:24,657 INFO [org.hibernate.cfg.SettingsFactory] - Order SQL inserts for batching: disabled
+2017-10-31 11:02:24,657 INFO [org.hibernate.cfg.SettingsFactory] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-10-31 11:02:24,665 INFO [org.hibernate.hql.ast.ASTQueryTranslatorFactory] - Using ASTQueryTranslatorFactory
+2017-10-31 11:02:24,666 INFO [org.hibernate.cfg.SettingsFactory] - Query language substitutions: {}
+2017-10-31 11:02:24,666 INFO [org.hibernate.cfg.SettingsFactory] - JPA-QL strict compliance: disabled
+2017-10-31 11:02:24,667 INFO [org.hibernate.cfg.SettingsFactory] - Second-level cache: enabled
+2017-10-31 11:02:24,667 INFO [org.hibernate.cfg.SettingsFactory] - Query cache: disabled
+2017-10-31 11:02:24,667 INFO [org.hibernate.cfg.SettingsFactory] - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-10-31 11:02:24,668 INFO [org.hibernate.cfg.SettingsFactory] - Optimize cache for minimal puts: disabled
+2017-10-31 11:02:24,669 INFO [org.hibernate.cfg.SettingsFactory] - Structured second-level cache entries: disabled
+2017-10-31 11:02:24,683 INFO [org.hibernate.cfg.SettingsFactory] - Echoing all SQL to stdout
+2017-10-31 11:02:24,685 INFO [org.hibernate.cfg.SettingsFactory] - Statistics: disabled
+2017-10-31 11:02:24,686 INFO [org.hibernate.cfg.SettingsFactory] - Deleted entity synthetic identifier rollback: disabled
+2017-10-31 11:02:24,686 INFO [org.hibernate.cfg.SettingsFactory] - Default entity-mode: pojo
+2017-10-31 11:02:24,687 INFO [org.hibernate.cfg.SettingsFactory] - Named query checking : enabled
+2017-10-31 11:02:24,687 INFO [org.hibernate.cfg.SettingsFactory] - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-10-31 11:02:24,841 INFO [org.hibernate.impl.SessionFactoryImpl] - building session factory
+2017-10-31 11:02:25,462 INFO [org.hibernate.impl.SessionFactoryObjectFactory] - Not binding factory to JNDI, no JNDI name configured
+2017-10-31 11:02:25,480 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - Running hbm2ddl schema update
+2017-10-31 11:02:25,480 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - fetching database metadata
+2017-10-31 11:02:25,586 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - updating schema
+2017-10-31 11:02:25,763 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - table found: test.player
+2017-10-31 11:02:25,763 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - columns: [exp, level, playername, passward, playerid]
+2017-10-31 11:02:25,764 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - foreign keys: []
+2017-10-31 11:02:25,764 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - indexes: [primary]
+2017-10-31 11:02:25,766 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - schema update complete
+2017-10-31 11:02:27,734 INFO [com.cn.server.Server] - *****start
+2017-10-31 11:03:21,050 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2017-10-31 11:03:21,051 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 17
+2017-10-31 11:03:21,060 INFO [com.cn.server.ServerHandler] - *****当前线程id: 25
+2017-10-31 11:03:21,087 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-10-31 11:03:21,774 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-10-31 11:03:21,774 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:1 cmd:2 resultCode:6
+2017-10-31 11:03:28,449 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2017-10-31 11:03:28,450 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 17
+2017-10-31 11:03:28,451 INFO [com.cn.server.ServerHandler] - *****当前线程id: 25
+2017-10-31 11:03:28,451 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-10-31 11:03:28,587 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-10-31 11:03:28,588 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:1 cmd:2 resultCode:7
+2017-10-31 11:03:35,116 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2017-10-31 11:03:35,116 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 17
+2017-10-31 11:03:35,117 INFO [com.cn.server.ServerHandler] - *****当前线程id: 25
+2017-10-31 11:03:35,118 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-10-31 11:03:35,166 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-10-31 11:03:35,166 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:1 cmd:2 resultCode:7
+2017-10-31 11:03:37,988 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2017-10-31 11:03:37,988 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 17
+2017-10-31 11:03:37,989 INFO [com.cn.server.ServerHandler] - *****当前线程id: 25
+2017-10-31 11:03:37,989 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-10-31 11:03:38,038 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-10-31 11:03:38,038 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:1 cmd:2 resultCode:7
+2017-10-31 11:05:45,195 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2017-10-31 11:05:45,196 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 17
+2017-10-31 11:05:45,197 INFO [com.cn.server.ServerHandler] - *****当前线程id: 25
+2017-10-31 11:05:45,197 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2017-10-31 11:05:45,304 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-10-31 11:05:45,304 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:1 cmd:2 resultCode:0
+2017-10-31 11:05:48,479 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2017-10-31 11:05:48,480 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 17
+2017-10-31 11:05:48,481 INFO [com.cn.server.ServerHandler] - *****当前线程id: 25
+2017-10-31 11:05:48,481 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：1
+2017-10-31 11:05:48,563 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-10-31 11:05:48,563 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:2 cmd:101 resultCode:0
+2017-10-31 11:05:48,564 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-10-31 11:05:48,564 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:2 cmd:1 resultCode:0
+2017-10-31 11:05:52,058 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2017-10-31 11:05:52,058 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 17
+2017-10-31 11:05:52,059 INFO [com.cn.server.ServerHandler] - *****当前线程id: 25
+2017-10-31 11:05:52,059 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：1
+2017-10-31 11:05:52,109 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-10-31 11:05:52,109 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:2 cmd:101 resultCode:0
+2017-10-31 11:05:52,110 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-10-31 11:05:52,110 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:2 cmd:1 resultCode:0
+2017-10-31 14:58:59,834 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2017-10-31 14:58:59,835 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 17
+2017-10-31 14:58:59,838 INFO [com.cn.server.ServerHandler] - *****当前线程id: 25
+2017-10-31 14:58:59,838 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：1
+2017-10-31 14:58:59,885 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-10-31 14:58:59,885 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:2 cmd:101 resultCode:0
+2017-10-31 14:58:59,886 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-10-31 14:58:59,886 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:2 cmd:1 resultCode:0
+2017-10-31 14:59:00,374 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2017-10-31 14:59:00,374 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 17
+2017-10-31 14:59:00,375 INFO [com.cn.server.ServerHandler] - *****当前线程id: 25
+2017-10-31 14:59:00,375 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：1
+2017-10-31 14:59:00,440 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-10-31 14:59:00,441 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:2 cmd:101 resultCode:0
+2017-10-31 14:59:00,442 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-10-31 14:59:00,442 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:2 cmd:1 resultCode:0
+2017-10-31 14:59:24,552 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2017-10-31 14:59:24,553 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 17
+2017-10-31 14:59:24,554 INFO [com.cn.server.ServerHandler] - *****当前线程id: 25
+2017-10-31 14:59:24,555 INFO [com.cn.server.ServerHandler] - ****** module:2   cmd：1
+2017-10-31 14:59:24,608 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-10-31 14:59:24,608 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:2 cmd:101 resultCode:0
+2017-10-31 14:59:24,609 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 17
+2017-10-31 14:59:24,609 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:2 cmd:1 resultCode:0
+2017-10-31 20:25:21,970 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2017-10-31 20:25:21,970 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 17
+2017-10-31 20:25:21,978 INFO [com.cn.server.ServerHandler] - ***** 会话移除
+2018-05-25 11:04:56,954 INFO [org.springframework.context.support.ClassPathXmlApplicationContext] - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@73a8dfcc: startup date [Fri May 25 11:04:56 CST 2018]; root of context hierarchy
+2018-05-25 11:04:57,054 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-05-25 11:04:57,853 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from file [D:\workspace\chat4_Server\target\classes\jdbc.properties]
+2018-05-25 11:04:57,853 INFO [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] - Loading properties file from file [D:\workspace\chat4_Server\target\classes\log4j.properties]
+2018-05-25 11:04:57,893 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4f970963: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,chatHandlerImpl,chatServiceImpl,playerDao,playerHandlerImpl,playerServiceImpl,handlerScaner,server,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sessionFactory,hibernateTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2018-05-25 11:04:58,055 INFO [org.springframework.jdbc.datasource.DriverManagerDataSource] - Loaded JDBC driver: com.mysql.jdbc.Driver
+2018-05-25 11:04:58,108 INFO [org.hibernate.cfg.annotations.Version] - Hibernate Annotations 3.5.6-Final
+2018-05-25 11:04:58,120 INFO [org.hibernate.cfg.Environment] - Hibernate 3.5.6-Final
+2018-05-25 11:04:58,122 INFO [org.hibernate.cfg.Environment] - hibernate.properties not found
+2018-05-25 11:04:58,125 INFO [org.hibernate.cfg.Environment] - Bytecode provider name : javassist
+2018-05-25 11:04:58,129 INFO [org.hibernate.cfg.Environment] - using JDK 1.4 java.sql.Timestamp handling
+2018-05-25 11:04:58,251 INFO [org.hibernate.annotations.common.Version] - Hibernate Commons Annotations 3.2.0.Final
+2018-05-25 11:04:58,327 INFO [org.hibernate.cfg.AnnotationBinder] - Binding entity from annotated class: com.cn.server.module.player.dao.entity.Player
+2018-05-25 11:04:58,393 INFO [org.hibernate.cfg.annotations.EntityBinder] - Bind entity com.cn.server.module.player.dao.entity.Player on table player
+2018-05-25 11:04:58,440 INFO [org.hibernate.cfg.AnnotationConfiguration] - Hibernate Validator not found: ignoring
+2018-05-25 11:04:58,443 INFO [org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean] - Building new Hibernate SessionFactory
+2018-05-25 11:04:58,447 INFO [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2018-05-25 11:04:58,492 INFO [org.hibernate.connection.ConnectionProviderFactory] - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2018-05-25 11:04:59,667 WARN [org.hibernate.util.JDBCExceptionReporter] - SQL Error: 0, SQLState: 08S01
+2018-05-25 11:04:59,667 ERROR [org.hibernate.util.JDBCExceptionReporter] - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2018-05-25 11:04:59,668 WARN [org.hibernate.cfg.SettingsFactory] - Could not obtain connection to query metadata
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:348)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2391)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:173)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:164)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:153)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:119)
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:83)
+	at org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:114)
+	at org.hibernate.cfg.Configuration.buildSettingsInternal(Configuration.java:2163)
+	at org.hibernate.cfg.Configuration.buildSettings(Configuration.java:2159)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1383)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:954)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1511)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:636)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:938)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.cn.server.ServerMain.main(ServerMain.java:15)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:298)
+	... 90 more
+2018-05-25 11:04:59,707 INFO [org.hibernate.dialect.Dialect] - Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-05-25 11:04:59,723 INFO [org.hibernate.engine.jdbc.JdbcSupportLoader] - Disabling contextual LOB creation as connection was null
+2018-05-25 11:04:59,725 INFO [org.hibernate.transaction.TransactionFactoryFactory] - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2018-05-25 11:04:59,727 INFO [org.hibernate.transaction.TransactionManagerLookupFactory] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2018-05-25 11:04:59,727 INFO [org.hibernate.cfg.SettingsFactory] - Automatic flush during beforeCompletion(): disabled
+2018-05-25 11:04:59,727 INFO [org.hibernate.cfg.SettingsFactory] - Automatic session close at end of transaction: disabled
+2018-05-25 11:04:59,730 INFO [org.hibernate.cfg.SettingsFactory] - Scrollable result sets: disabled
+2018-05-25 11:04:59,730 INFO [org.hibernate.cfg.SettingsFactory] - JDBC3 getGeneratedKeys(): disabled
+2018-05-25 11:04:59,732 INFO [org.hibernate.cfg.SettingsFactory] - Connection release mode: auto
+2018-05-25 11:04:59,734 INFO [org.hibernate.cfg.SettingsFactory] - Maximum outer join fetch depth: 2
+2018-05-25 11:04:59,735 INFO [org.hibernate.cfg.SettingsFactory] - Default batch fetch size: 1
+2018-05-25 11:04:59,736 INFO [org.hibernate.cfg.SettingsFactory] - Generate SQL with comments: disabled
+2018-05-25 11:04:59,736 INFO [org.hibernate.cfg.SettingsFactory] - Order SQL updates by primary key: disabled
+2018-05-25 11:04:59,736 INFO [org.hibernate.cfg.SettingsFactory] - Order SQL inserts for batching: disabled
+2018-05-25 11:04:59,736 INFO [org.hibernate.cfg.SettingsFactory] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2018-05-25 11:04:59,740 INFO [org.hibernate.hql.ast.ASTQueryTranslatorFactory] - Using ASTQueryTranslatorFactory
+2018-05-25 11:04:59,740 INFO [org.hibernate.cfg.SettingsFactory] - Query language substitutions: {}
+2018-05-25 11:04:59,740 INFO [org.hibernate.cfg.SettingsFactory] - JPA-QL strict compliance: disabled
+2018-05-25 11:04:59,740 INFO [org.hibernate.cfg.SettingsFactory] - Second-level cache: enabled
+2018-05-25 11:04:59,741 INFO [org.hibernate.cfg.SettingsFactory] - Query cache: disabled
+2018-05-25 11:04:59,741 INFO [org.hibernate.cfg.SettingsFactory] - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2018-05-25 11:04:59,741 INFO [org.hibernate.cfg.SettingsFactory] - Optimize cache for minimal puts: disabled
+2018-05-25 11:04:59,741 INFO [org.hibernate.cfg.SettingsFactory] - Structured second-level cache entries: disabled
+2018-05-25 11:04:59,746 INFO [org.hibernate.cfg.SettingsFactory] - Echoing all SQL to stdout
+2018-05-25 11:04:59,747 INFO [org.hibernate.cfg.SettingsFactory] - Statistics: disabled
+2018-05-25 11:04:59,747 INFO [org.hibernate.cfg.SettingsFactory] - Deleted entity synthetic identifier rollback: disabled
+2018-05-25 11:04:59,748 INFO [org.hibernate.cfg.SettingsFactory] - Default entity-mode: pojo
+2018-05-25 11:04:59,748 INFO [org.hibernate.cfg.SettingsFactory] - Named query checking : enabled
+2018-05-25 11:04:59,748 INFO [org.hibernate.cfg.SettingsFactory] - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2018-05-25 11:04:59,789 INFO [org.hibernate.impl.SessionFactoryImpl] - building session factory
+2018-05-25 11:05:00,017 INFO [org.hibernate.impl.SessionFactoryObjectFactory] - Not binding factory to JNDI, no JNDI name configured
+2018-05-25 11:05:00,024 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - Running hbm2ddl schema update
+2018-05-25 11:05:00,024 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - fetching database metadata
+2018-05-25 11:05:01,026 WARN [org.hibernate.util.JDBCExceptionReporter] - SQL Error: 0, SQLState: 08S01
+2018-05-25 11:05:01,026 ERROR [org.hibernate.util.JDBCExceptionReporter] - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2018-05-25 11:05:01,026 ERROR [org.hibernate.tool.hbm2ddl.SchemaUpdate] - could not get database metadata
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:348)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2391)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:173)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:164)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:153)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:119)
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:83)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:168)
+	at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:386)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1385)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:954)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1511)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:636)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:938)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.cn.server.ServerMain.main(ServerMain.java:15)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:298)
+	... 90 more
+2018-05-25 11:05:01,045 ERROR [org.hibernate.tool.hbm2ddl.SchemaUpdate] - could not complete schema update
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:348)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2391)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:173)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:164)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:153)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:119)
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:83)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:168)
+	at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:386)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1385)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:954)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1511)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:636)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:938)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.cn.server.ServerMain.main(ServerMain.java:15)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:298)
+	... 90 more
+2018-05-25 11:05:01,990 INFO [com.cn.server.Server] - *****start
+2018-05-25 11:06:31,702 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2018-05-25 11:06:31,702 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 18
+2018-05-25 11:06:31,705 INFO [com.cn.server.ServerHandler] - *****当前线程id: 26
+2018-05-25 11:06:31,707 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2018-05-25 11:06:32,896 WARN [org.hibernate.util.JDBCExceptionReporter] - SQL Error: 0, SQLState: 08S01
+2018-05-25 11:06:32,897 ERROR [org.hibernate.util.JDBCExceptionReporter] - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2018-05-25 11:06:32,897 WARN [org.hibernate.util.JDBCExceptionReporter] - SQL Error: 0, SQLState: 08S01
+2018-05-25 11:06:32,897 ERROR [org.hibernate.util.JDBCExceptionReporter] - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2018-05-25 11:06:32,906 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 18
+2018-05-25 11:06:32,909 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:1 cmd:2 resultCode:3
+2018-05-25 13:44:38,518 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2018-05-25 13:44:38,518 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 18
+2018-05-25 13:44:38,541 INFO [com.cn.server.ServerHandler] - ***** 会话移除
+2018-05-25 13:50:28,624 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2018-05-25 13:50:28,625 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 19
+2018-05-25 13:50:28,625 INFO [com.cn.server.ServerHandler] - *****当前线程id: 27
+2018-05-25 13:50:28,625 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2018-05-25 13:50:29,630 WARN [org.hibernate.util.JDBCExceptionReporter] - SQL Error: 0, SQLState: 08S01
+2018-05-25 13:50:29,630 ERROR [org.hibernate.util.JDBCExceptionReporter] - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2018-05-25 13:50:29,630 WARN [org.hibernate.util.JDBCExceptionReporter] - SQL Error: 0, SQLState: 08S01
+2018-05-25 13:50:29,630 ERROR [org.hibernate.util.JDBCExceptionReporter] - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2018-05-25 13:50:29,634 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 19
+2018-05-25 13:50:29,634 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:1 cmd:2 resultCode:3
+2018-05-25 13:50:32,609 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2018-05-25 13:50:32,609 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 19
+2018-05-25 13:50:32,609 INFO [com.cn.server.ServerHandler] - *****当前线程id: 27
+2018-05-25 13:50:32,609 INFO [com.cn.server.ServerHandler] - ****** module:1   cmd：2
+2018-05-25 13:50:33,608 WARN [org.hibernate.util.JDBCExceptionReporter] - SQL Error: 0, SQLState: 08S01
+2018-05-25 13:50:33,609 ERROR [org.hibernate.util.JDBCExceptionReporter] - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2018-05-25 13:50:33,609 WARN [org.hibernate.util.JDBCExceptionReporter] - SQL Error: 0, SQLState: 08S01
+2018-05-25 13:50:33,609 ERROR [org.hibernate.util.JDBCExceptionReporter] - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2018-05-25 13:50:33,613 INFO [com.cn.common.core.codc.ResponseEncoder] - *****当前线程id: 19
+2018-05-25 13:50:33,614 INFO [com.cn.common.core.codc.ResponseEncoder] - ****返回请求:module:1 cmd:2 resultCode:3
+2018-05-25 13:50:37,042 INFO [com.cn.common.core.codc.RequestDecoder] - **解码开始！
+2018-05-25 13:50:37,042 INFO [com.cn.common.core.codc.RequestDecoder] - *****当前线程id: 19
+2018-05-25 13:50:37,053 INFO [com.cn.server.ServerHandler] - ***** 会话移除
